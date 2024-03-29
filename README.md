@@ -33,7 +33,7 @@
 ## 🚀 Installation
 `` Required python >= 3.10``
 
-``1. Сlose the repo: git clone https://github.com/Jaammerr/NyanHeroes-BOT.git and open CMD (console) inside it``
+``1. Сlone the repo: git clone https://github.com/Jaammerr/NyanHeroes-BOT.git and open CMD (console) inside it``
 
 ``2. Install requirements: pip install -r requirements.txt``
 
