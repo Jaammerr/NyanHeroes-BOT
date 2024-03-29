@@ -1,0 +1,30 @@
+referral_code: JammerCrypto
+timeout_between_quests: 2
+threads: 3
+ignored_quests_categories:
+  - twitter_deepdive
+  - epic_connect
+  - wallet
+  - m
+  - passphrase
+  - chonky_code
+  - add_code
+  - guardian_code
+  - nft_genesisnyan
+  - nft_genesisnyan9
+  - nft_genesisguardian
+  - nft_genesisguardian9
+  - nft_genesisnyan2
+  - nft_genesisguardian2
+  - nft_genesisnyan5
+  - nft_genesisguardian5
+  - nft_genesisnyan6months
+  - nft_genesisnyan12months
+  - nft_madlad
+  - nft_genesisnyan18months
+  - nft_tensorian
+  - nft_genesisnyan24months
+  - nft_genesisnyanparty
+  - nft_monkee
+  - nft_genopets
+  - nft_ethlizards
