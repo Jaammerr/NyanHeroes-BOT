@@ -58,7 +58,9 @@ class Account:
             account._session = requests.Session(
                 proxies={"http://": account.proxy},
                 timeout=5,
+                verify=False
             )
+            account._reformatted_proxy = account.proxy
 
         else:
             account._reformatted_proxy = account.get_reformatted_proxy
@@ -69,6 +71,7 @@ class Account:
                     else None
                 ),
                 timeout=5,
+                verify=False
             )
 
         if not (auth_token, cookies):
@@ -285,6 +288,7 @@ class Account:
             # follow_redirects=True,
             proxies={"http://": self._reformatted_proxy} if self.proxy else None,
             timeout=5,
+            verify=False
         )
 
         generated_csrf_token = secrets.token_hex(16)
