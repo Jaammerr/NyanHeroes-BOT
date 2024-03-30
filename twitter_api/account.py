@@ -57,7 +57,7 @@ class Account:
         if proxy.startswith("http://"):
             account._session = requests.Session(
                 proxies={"http://": account.proxy},
-                timeout=5,
+                timeout=30,
                 verify=False
             )
             account._reformatted_proxy = account.proxy
@@ -70,7 +70,7 @@ class Account:
                     if account._reformatted_proxy
                     else None
                 ),
-                timeout=5,
+                timeout=30,
                 verify=False
             )
 
@@ -287,7 +287,7 @@ class Account:
         session = requests.Session(
             # follow_redirects=True,
             proxies={"http://": self._reformatted_proxy} if self.proxy else None,
-            timeout=5,
+            timeout=30,
             verify=False
         )
 
