@@ -220,7 +220,7 @@ class Bot(noble_tls.Session):
 
                 else:
                     await self.send_request(
-                        method="/Quest/setQuest", json_data=json_data
+                        method="/Quest/setQuests", json_data=json_data
                     )
                     logger.success(
                         f"Account: {self.account.auth_token} | Quest completed: {quest_data['title']} | Category: {quest_data['category']}"
