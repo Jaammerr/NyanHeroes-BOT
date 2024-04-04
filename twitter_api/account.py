@@ -311,7 +311,18 @@ class Account:
     def bind_account_v1(self, bind_params: BindAccountParamsV1) -> BindAccountDataV1:
 
         def get_oauth_token() -> str:
-            _response = requests.get(str(bind_params.url), allow_redirects=True)
+            _response = requests.get(str(bind_params.url), allow_redirects=True, headers = {
+                'accept': 'application/json, text/plain, */*',
+                'accept-language': 'en-US,en;q=0.9,ru;q=0.8',
+                'origin': 'https://missions.nyanheroes.com',
+                'sec-ch-ua': '"Google Chrome";v="123", "Not:A-Brand";v="8", "Chromium";v="123"',
+                'sec-ch-ua-mobile': '?0',
+                'sec-ch-ua-platform': '"Windows"',
+                'sec-fetch-dest': 'empty',
+                'sec-fetch-mode': 'cors',
+                'sec-fetch-site': 'same-site',
+                'user-agent': self.session.headers['user-agent'],
+            })
             raise_for_status(_response)
 
             token = re.search(
@@ -1659,3 +1670,4 @@ class Account:
         Path(f'{fname or cookies.get("username")}.cookies').write_bytes(
             orjson.dumps(dict(cookies))
         )
+        
